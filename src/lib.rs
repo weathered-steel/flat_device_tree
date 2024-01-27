@@ -41,7 +41,6 @@ pub mod util;
 
 use alloc::{borrow::ToOwned, string::String, vec::Vec};
 use core::str;
-use util::{align, SliceRead, SliceReadError, VecWrite, VecWriteError};
 
 pub use error::*;
 use util::{align, SliceRead, VecWrite};

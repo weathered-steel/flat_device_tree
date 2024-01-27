@@ -18,7 +18,7 @@ pub trait SliceRead {
 impl<'a> SliceRead for &'a [u8] {
     fn read_be_u32(&self, pos: usize) -> SliceReadResult<u32> {
         // check size is valid
-        if !(pos + 4 <= self.len()) {
+        if pos + 4 > self.len() {
             return Err(SliceReadError::UnexpectedEndOfInput);
         }
 
@@ -30,7 +30,7 @@ impl<'a> SliceRead for &'a [u8] {
 
     fn read_be_u64(&self, pos: usize) -> SliceReadResult<u64> {
         // check size is valid
-        if !(pos + 8 <= self.len()) {
+        if pos + 8 >self.len() {
             return Err(SliceReadError::UnexpectedEndOfInput);
         }
 
@@ -58,7 +58,7 @@ impl<'a> SliceRead for &'a [u8] {
     }
 
     fn subslice(&self, start: usize, end: usize) -> SliceReadResult<&[u8]> {
-        if !(end < self.len()) {
+        if end >= self.len() {
             return Err(SliceReadError::UnexpectedEndOfInput);
         }
 
