@@ -1,12 +1,12 @@
 [package]
-name = "device_tree"
-version = "1.0.3"
+name = "flat_device_tree"
+version = "2.1.0"
 edition = "2021"
-authors = ["Marc Brinkmann <git@marcbrinkmann.de>"]
+authors = ["Marc Brinkmann <git@marcbrinkmann.de>", "Rust device_tree developers"]
 license = "MIT"
 description = "Reads and parses Linux device tree images"
-repository = "https://github.com/mbr/device_tree-rs"
-documentation = "https://mbr.github.io/device_tree-rs/device_tree/"
+repository = "https://codeberg.org/weathered-steel/flat_device_tree"
+documentation = "https://docs.rs/flat_device_tree"
 
 [dependencies]
 hashbrown = "0.13"

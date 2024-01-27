@@ -1,4 +1,6 @@
-# `device_tree`: Parse flattened Linux device trees
+# `flat_device_tree`: Parse flattened Linux device trees
+
+**NOTE**: `flat_device_tree` development has moved to [Codeberg](https://codeberg.org/weathered-steel/flat_device_tree)
 
 Device trees are used to describe a lot of hardware, especially in the ARM embedded world and are also used to boot Linux on these device. A device tree describes addresses and other attributes for many parts on these boards.
 
